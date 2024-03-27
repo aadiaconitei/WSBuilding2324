@@ -22,8 +22,8 @@
         const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
         xmlhttp.onreadystatechange = function () {
-            // console.info('aici', xmlhttp.getAllResponseHeaders());
-            // console.info('aici2', xmlhttp);
+            console.info('aici', xmlhttp.getAllResponseHeaders());
+            console.info('aici2', xmlhttp);
             if (this.readyState == 4 && this.status == 200) {
                 let myArr = JSON.parse(this.responseText);
                 myFunction(myArr);
@@ -36,7 +36,7 @@
         function myFunction(data) {
             let out = "";
 
-            console.log(data.bpi);
+            console.log(data);
             document.getElementById("data").innerHTML = data.time.updated;
             out += `
                 <ul>

@@ -10,18 +10,18 @@
         $(document).ready(function () {
             $("button").click(function (e) {
                 $.ajax({
-                    url: 'http://localhost/mysite/post.php',
+                    url: 'http://localhost/test/post.php',
                     //headers: {"Access-Control-Allow-Origin:": "*"},
                     dataType: 'text',
-                    type: 'post',
+                    type: 'get',
                     contentType: 'application/x-www-form-urlencoded',
-                    data: { nume: 'Adrian',email:'test@demo.com' },
+                    data: { nume: 'Adrian', email: 'test@demo.com' },
                     success: function (data, status, xhr) {
                         $('div').html(data);
-                        $('div').delay(5000).fadeOut(800);   
+                        $('div').delay(5000).fadeOut(800);
                     },
                     error: function (jqXhr, status, errorThrown) {
-                        console.log(errorThrown);
+                        console.log(status, errorThrown);
                     }
                 });
 

@@ -13,7 +13,7 @@
     <a href="https://github.com/jesseokeya/Forbes400">https://github.com/jesseokeya/Forbes400</a> <br>
     <a href="https://www.forbes.com/forbes-400/"> https://www.forbes.com/forbes-400/</a> <br>
     <button id='getDataBtn' onclick="start()">Get Data JS</button>
-    <button id='getDataBtn2' >Get Data jQuery</button>
+    <button id='getDataBtn2'>Get Data jQuery</button>
 
     <div id="richList"></div>
 
@@ -45,7 +45,7 @@
         data.forEach(item => {
             // console.table(item);
             richList += `
-                <li>Nume: ${item.personName} Industrie:  ${item.industries} Firma: ${item.source}</li>
+                <li>Nume: ${item.personName} Industrie:  ${item.industries} Firma: ${item.source} Oras: ${item.city}</li>
             `})
         richList += "</ol>"
         document.getElementById('loader').classList.add('hidden');
@@ -55,10 +55,10 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
- $('#getDataBtn2').click(function () {
+    $('#getDataBtn2').click(function () {
 
         $.ajax({
             type: "GET",
