@@ -28,14 +28,14 @@
     <script>
         Promise.resolve()
             .then(function a() {
-                Promise.resolve().then(function c() { 
+                Promise.reject().then(function c() {
                     console.log('Promisiunea 1 este executata');
                 });
             })
             .then(function b() {
                 Promise.resolve().then(function d() {
                     console.log('Promisiunea 2 este executata');
-                 });
+                });
             });
     </script>
 </body>
